@@ -1,0 +1,24 @@
+python train_voxtell_sfda.py \
+    --sequences P0 \
+    --prompts liver \
+    --test-cases-file /data/zy/SRPL-SFDA-main/runs/voxtell_sfda/worst_zeroshot_split_p0/worst_zeroshot_split.json \
+    --pseudo-dir /data/zy/SRPL-SFDA-main/runs/voxtell_sfda/pseudo_reliable_post_m0_worstsplit_train \
+    --output-dir /data/zy/SRPL-SFDA-main/runs/voxtell_sfda/adapted_post_m0_worstsplit_1000it_qkv \
+    --max-iterations 1000 \
+    --val-every 20 \
+    --save-every 100 \
+    --steps-per-epoch 30 \
+    --batch-size 1 \
+    --trainable lora \
+    --lora-target attention \
+    --lora-attention qkv \
+    --lora-rank 8 \
+    --lora-alpha 16 \
+    --lr 1e-5 \
+    --weight-decay 1e-4 \
+    --pseudo-target soft \
+    --reliable-supervision mask \
+    --missing-reliable-mode ones \
+    --baseline-pred-dir /data/zy/VoxTell_from_disk/out_multi \
+    --device cuda \
+    --gpu 0
