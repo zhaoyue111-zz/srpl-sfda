@@ -269,3 +269,5 @@ Dice 0.8477, mIoU 0.7541
     --evaluate
 
 ```
+
+训练结果文件：链接: https://pan.baidu.com/s/19jvzqydsihOQ1I_NSOGk9A?pwd=zzyy 提取码: zzyy
